@@ -1,0 +1,24 @@
+﻿<Properties StartupConfiguration="{871B5A90-103A-46A5-BBB9-07C02B9851D1}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Mac|x86" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="src\UtilityFunctions.cs">
+    <Files>
+      <File FileName="src\Model\AIPlayer.cs" Line="65" Column="68" />
+      <File FileName="src\Model\Player.cs" Line="1" Column="1" />
+      <File FileName="src\DeploymentController.cs" Line="6" Column="14" />
+      <File FileName="src\DiscoveryController.cs" Line="1" Column="1" />
+      <File FileName="src\EndingGameController.cs" Line="1" Column="1" />
+      <File FileName="src\GameController.cs" Line="7" Column="26" />
+      <File FileName="src\GameLogic.cs" Line="1" Column="1" />
+      <File FileName="src\GameResources.cs" Line="1" Column="1" />
+      <File FileName="src\GameState.cs" Line="1" Column="1" />
+      <File FileName="src\HighScoreController.cs" Line="1" Column="1" />
+      <File FileName="src\MenuController.cs" Line="1" Column="1" />
+      <File FileName="src\UtilityFunctions.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.BattleShips PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
