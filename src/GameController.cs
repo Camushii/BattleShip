@@ -151,13 +151,14 @@ public static class GameController
 	/// </remarks>
 	private static void AttackCompleted(object sender, AttackResult result)
 	{
+		string Message = "";
 		bool isHuman = false;
 		isHuman = object.ReferenceEquals(_theGame.Player, HumanPlayer);
 
 		if (isHuman) {
-			Message = "You " + result.ToString();
+			Message += "You " + result.ToString();
 		} else {
-			Message = "The AI " + result.ToString();
+			Message += "The AI " + result.ToString();
 		}
 
 		switch (result.Value) {
@@ -347,7 +348,7 @@ public static class GameController
 	public static void AddNewState(GameState state)
 	{
 		_state.Push(state);
-		Message = "";
+		string Message = "";
 	}
 
 	/// <summary>
