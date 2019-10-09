@@ -22,7 +22,7 @@ static class DiscoveryController
 	/// </remarks>
 	public static void HandleDiscoveryInput()
 	{
-		if (SwinGame.KeyTyped(KeyCode.VK_ESCAPE)) {
+		if (SwinGame.KeyTyped(KeyCode.vk_ESCAPE)) {
 			AddNewState(GameState.ViewingGameMenu);
 		}
 
@@ -30,6 +30,20 @@ static class DiscoveryController
 			DoAttack();
 		}
 	}
+
+	static void AddNewState (GameState viewingGameMenu)
+	{
+		throw new NotImplementedException ();
+	}
+	public static float FIELD_TOP { get; private set; }
+
+	public static float FIELD_LEFT { get; private set; }	
+
+	public static int CELL_WIDTH { get; private set; }
+
+	public static int CELL_GAP { get; private set; }
+
+	public static int CELL_HEIGHT { get; private set; }
 
 	/// <summary>
 	/// Attack the location that the mouse if over.
@@ -53,6 +67,13 @@ static class DiscoveryController
 		}
 	}
 
+	static void Attack (int row, int col)
+	{
+		throw new NotImplementedException ();
+	}
+
+	public static object ComputerPlayer { get; private set; }
+
 	/// <summary>
 	/// Draws the game during the attack phase.
 	/// </summary>s
@@ -63,7 +84,7 @@ static class DiscoveryController
 		const int HITS_TOP = 206;
 		const int SPLASH_TOP = 256;
 
-		if ((SwinGame.KeyDown(KeyCode.VK_LSHIFT) | SwinGame.KeyDown(KeyCode.VK_RSHIFT)) & SwinGame.KeyDown(KeyCode.VK_C)) {
+		if ((SwinGame.KeyDown(KeyCode.vk_LSHIFT) | SwinGame.KeyDown(KeyCode.vk_RSHIFT)) & SwinGame.KeyDown(KeyCode.vk_c)) {
 			DrawField(HumanPlayer.EnemyGrid, ComputerPlayer, true);
 		} else {
 			DrawField(HumanPlayer.EnemyGrid, ComputerPlayer, false);
@@ -77,7 +98,20 @@ static class DiscoveryController
 		SwinGame.DrawText(HumanPlayer.Missed.ToString(), Color.White, GameFont("Menu"), SCORES_LEFT, SPLASH_TOP);
 	}
 
+
+	static void DrawMessage ()
+	{
+		throw new NotImplementedException ();
+	}
+
+	static void DrawField (object enemyGrid, object computerPlayer, bool v)
+	{
+		throw new NotImplementedException ();
+	}
 }
+
+
+
 
 //=======================================================
 //Service provided by Telerik (www.telerik.com)
