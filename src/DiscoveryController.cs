@@ -90,7 +90,7 @@ static class DiscoveryController
 			DrawField(HumanPlayer.EnemyGrid, ComputerPlayer, false);
 		}
 
-		DrawSmallField(HumanPlayer.PlayerGrid, HumanPlayer;
+		UtilityFunctions.DrawSmallField(HumanPlayer.PlayerGrid, HumanPlayer);
 		DrawMessage();
 
 		SwinGame.DrawText(HumanPlayer.Shots.ToString(), Color.White, GameFont("Menu"), SCORES_LEFT, SHOTS_TOP);
