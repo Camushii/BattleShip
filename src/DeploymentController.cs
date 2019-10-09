@@ -83,6 +83,21 @@ static class DeploymentController
 		}
 	}
 
+	static void EndDeployment ()
+	{
+		throw new NotImplementedException ();
+	}
+
+	static bool IsMouseInRectangle (int pLAY_BUTTON_LEFT, int tOP_BUTTONS_TOP, int pLAY_BUTTON_WIDTH, int tOP_BUTTONS_HEIGHT)
+	{
+		throw new NotImplementedException ();
+	}
+
+	static void AddNewState (GameState viewingGameMenu)
+	{
+		throw new NotImplementedException ();
+	}
+
 	/// <summary>
 	/// The user has clicked somewhere on the screen, check if its is a deployment and deploy
 	/// the current ship if that is the case.
