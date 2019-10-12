@@ -106,6 +106,13 @@ static class DeploymentController
 	/// If the click is in the grid it deploys to the selected location
 	/// with the indicated direction
 	/// </remarks>
+
+	public static int CELL_HEIGHT { get; private set; }
+	public static int CELL_GAP { get; private set; }
+	public static float FIELD_LEFT { get; private set; }
+	public static int CELL_WIDTH { get; private set; }
+
+
 	private static void DoDeployClick()
 	{
 		Point2D mouse = default(Point2D);

@@ -75,6 +75,7 @@
   <ItemGroup>
     <Compile Include="src\**\*.cs" />
     <Compile Include="src\HumanPlayer.cs" />
+    <Compile Include="src\ComputerPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">
