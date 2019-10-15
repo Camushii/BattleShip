@@ -1,22 +1,21 @@
 ﻿<Properties StartupConfiguration="{871B5A90-103A-46A5-BBB9-07C02B9851D1}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Mac|x86" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Windows|x86" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench ActiveDocument="Battleship Status">
     <Files>
-      <File FileName="src\Model\AIPlayer.cs" Line="26" Column="16" />
-      <File FileName="src\Model\Player.cs" Line="59" Column="2" />
-      <File FileName="src\DeploymentController.cs" Line="129" Column="51" />
-      <File FileName="src\DiscoveryController.cs" Line="95" Column="3" />
-      <File FileName="src\EndingGameController.cs" Line="38" Column="3" />
-      <File FileName="src\GameController.cs" Line="351" Column="15" />
-      <File FileName="src\GameLogic.cs" Line="32" Column="2" />
-      <File FileName="src\GameResources.cs" Line="275" Column="2" />
-      <File FileName="src\HighScoreController.cs" Line="203" Column="18" />
-      <File FileName="src\MenuController.cs" Line="121" Column="25" />
-      <File FileName="src\UtilityFunctions.cs" Line="147" Column="13" />
+      <File FileName="src\DeploymentController.cs" Line="8" Column="19" />
+      <File FileName="src\DiscoveryController.cs" Line="70" Column="4" />
+      <File FileName="src\EndingGameController.cs" Line="6" Column="3" />
+      <File FileName="src\GameController.cs" Line="6" Column="3" />
+      <File FileName="src\GameLogic.cs" Line="6" Column="21" />
+      <File FileName="src\GameResources.cs" Line="6" Column="3" />
+      <File FileName="src\HighScoreController.cs" Line="6" Column="3" />
+      <File FileName="src\MenuController.cs" Line="15" Column="1" />
+      <File FileName="src\UtilityFunctions.cs" Line="208" Column="2" />
+      <File FileName="src\GameState.cs" Line="6" Column="3" />
       <File FileName="Battleship Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>

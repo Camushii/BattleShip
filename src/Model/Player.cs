@@ -52,9 +52,7 @@ public class Player : IEnumerable<Ship>
 			}
 		}
 
-#pragma warning disable RECS0021 // Warns about calls to virtual member functions occuring in the constructor
 		RandomizeDeployment ();
-#pragma warning restore RECS0021 // Warns about calls to virtual member functions occuring in the constructor
 	}
 
 	/// <summary>
