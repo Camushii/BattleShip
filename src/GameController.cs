@@ -76,6 +76,9 @@ public static class GameController
 
 		//create the players
 		switch (_aiSetting) {
+			case AIOption.Easy:
+				_ai = new AIEasyPlayer (_theGame);
+				break;
 			case AIOption.Medium:
 				_ai = new AIMediumPlayer(_theGame);
 				break;
@@ -83,7 +86,7 @@ public static class GameController
 				_ai = new AIHardPlayer(_theGame);
 				break;
 			default:
-				_ai = new AIHardPlayer(_theGame);
+				_ai = new AIMediumPlayer(_theGame);
 				break;
 		}
 
@@ -151,14 +154,13 @@ public static class GameController
 	/// </remarks>
 	private static void AttackCompleted(object sender, AttackResult result)
 	{
-		string Message = "";
 		bool isHuman = false;
 		isHuman = object.ReferenceEquals(_theGame.Player, HumanPlayer);
 
 		if (isHuman) {
-			Message += "You " + result.ToString();
+			UtilityFunctions.Message = "You " + result.ToString();
 		} else {
-			Message += "The AI " + result.ToString();
+			UtilityFunctions.Message = "The AI " + result.ToString();
 		}
 
 		switch (result.Value) {
@@ -337,7 +339,7 @@ public static class GameController
 
 		UtilityFunctions.DrawAnimations();
 
-		SwinGame.RefreshScreen();
+		SwinGame.RefreshScreen(90);
 	}
 
 	/// <summary>
