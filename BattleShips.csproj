@@ -11,8 +11,8 @@
     <ApplicationIcon>Resources\SwinGame.ico</ApplicationIcon>
     <AssemblyName>BattleShips</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <UseMSBuildEngine>False</UseMSBuildEngine>
     <TargetFrameworkProfile />
+    <UseMSBuildEngine>false</UseMSBuildEngine>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug-Windows|x86' ">
     <DebugType>none</DebugType>
@@ -107,10 +107,6 @@
     </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System" />
-    <Reference Include="nunit.framework">
-      <HintPath>packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

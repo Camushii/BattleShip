@@ -243,6 +243,7 @@ static class UtilityFunctions
 				break;
 			case GameState.Deploying:
 				SwinGame.DrawBitmap(GameResources.GameImage("Deploy"), 0, 0);
+				SwinGame.DrawTextLines ("Press 'Esc' to open Game Menu", SwinGame.RGBAColor (2, 167, 252, 255), Color.Transparent, GameResources.GameFont ("Courier"), FontAlignment.AlignLeft, 40, 565, SwinGame.ScreenWidth(), SwinGame.ScreenHeight());
 				break;
 			default:
 				SwinGame.ClearScreen();

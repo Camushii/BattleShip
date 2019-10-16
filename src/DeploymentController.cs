@@ -148,7 +148,7 @@ static class DeploymentController
 				}
 
 				//SwinGame.DrawRectangle(Color.Black, SHIPS_LEFT, SHIPS_TOP + i * SHIPS_HEIGHT, SHIPS_WIDTH, SHIPS_HEIGHT)
-				SwinGame.DrawText (sn.ToString (), Color.White, GameResources.GameFont ("Courier"), SHIPS_LEFT + TEXT_OFFSET, SHIPS_TOP + i * SHIPS_HEIGHT);
+				SwinGame.DrawText (sn.ToString (), SwinGame.RGBAColor (2, 167, 252, 255), GameResources.GameFont ("Courier"), SHIPS_LEFT + TEXT_OFFSET + 90, SHIPS_TOP + i * SHIPS_HEIGHT);
 
 			}
 		}
