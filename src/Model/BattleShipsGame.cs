@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 // using System.Data;
 using System.Diagnostics;
+using System.Timers;
 /// <summary>
 /// The BattleShipsGame controls a big part of the game. It will add the two players
 /// to the game and make sure that both players ships are all deployed before starting the game.
@@ -31,7 +32,7 @@ public class BattleShipsGame
 	public event AttackCompletedHandler AttackCompleted;
 
 	private Player[] _players = new Player[3];
-
+	private static Timer _timer;
 	private int _playerIndex = 0;
 	/// <summary>
 	/// The current player.
@@ -84,13 +85,25 @@ public class BattleShipsGame
 
 		newAttack = Player.Shoot(row, col);
 
+
+
 		//Will exit the game when all players ships are destroyed
 		if (_players[otherPlayer].IsDestroyed) {
 			newAttack = new AttackResult(ResultOfAttack.GameOver, newAttack.Ship, newAttack.Text, row, col);
 		}
 
-		if (AttackCompleted != null) {
-			AttackCompleted(this, newAttack);
+		_timer = new System.Timers.Timer ();
+		_timer.Interval = 7000;
+
+		_timer.AutoReset = true;
+		_timer.Enabled = true;
+		if (_timer.Equals(0) && AttackCompleted != null) {
+			AttackCompleted (this, newAttack);
+		}
+		//change player when 7 second past
+		if (newAttack.Value == ResultOfAttack.Skip) {
+			_playerIndex = otherPlayer;
+
 		}
 
 		//change player if the last hit was a miss
