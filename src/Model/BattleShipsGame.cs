@@ -32,7 +32,7 @@ public class BattleShipsGame
 	public event AttackCompletedHandler AttackCompleted;
 
 	private Player[] _players = new Player[3];
-	private static Timer _timer;
+
 	private int _playerIndex = 0;
 	/// <summary>
 	/// The current player.
@@ -92,12 +92,7 @@ public class BattleShipsGame
 			newAttack = new AttackResult(ResultOfAttack.GameOver, newAttack.Ship, newAttack.Text, row, col);
 		}
 
-		_timer = new System.Timers.Timer ();
-		_timer.Interval = 7000;
-
-		_timer.AutoReset = true;
-		_timer.Enabled = true;
-		if (_timer.Equals(0) && AttackCompleted != null) {
+		if (AttackCompleted != null) {
 			AttackCompleted (this, newAttack);
 		}
 		//change player when 7 second past
