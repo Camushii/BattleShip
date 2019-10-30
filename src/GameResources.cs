@@ -216,7 +216,7 @@ public static class GameResources
 
 		SwinGame.DrawTextLines(message, Color.White, Color.Transparent, _LoadingFont, FontAlignment.AlignCenter, TX, TY, TW, TH);
 
-		SwinGame.RefreshScreen();
+		SwinGame.RefreshScreen(5);
 		SwinGame.ProcessEvents();
 	}
 
