@@ -22,6 +22,7 @@ public class Player : IEnumerable<Ship>
 	private int _hits;
 
 	private int _misses;
+	private int _skips;
 	/// <summary>
 	/// Returns the game that the player is part of.
 	/// </summary>
@@ -118,6 +119,10 @@ public class Player : IEnumerable<Ship>
 		get { return _misses; }
 	}
 
+	public int Skipped {
+		get { return _skips; }
+	}
+
 	public int Score {
 		get {
 			if (IsDestroyed) {
@@ -190,6 +195,9 @@ public class Player : IEnumerable<Ship>
 				break;
 			case ResultOfAttack.Miss:
 				_misses += 1;
+				break;
+			case ResultOfAttack.Skip:
+				_skips += 1;
 				break;
 		}
 
