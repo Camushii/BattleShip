@@ -21,6 +21,11 @@ public enum ResultOfAttack
 	Miss,
 
 	/// <summary>
+	/// The player skipped one turn.
+	/// </summary>
+	Skip,
+
+	/// <summary>
 	/// The player destroyed a ship
 	/// </summary>
 	Destroyed,
