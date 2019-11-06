@@ -14,7 +14,6 @@ using System.Diagnostics;
 /// </summary>
 public class AIHardPlayer : AIPlayer
 {
-
 	/// <summary>
 	/// Target allows the AI to know more things, for example the source of a
 	/// shot target

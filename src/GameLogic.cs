@@ -6,6 +6,7 @@ using System.Collections.Generic;
 //using System.Data;
 using System.Diagnostics;
 using SwinGameSDK;
+using System.Timers;
 static class GameLogic
 {
 	public static void Main()
@@ -29,6 +30,7 @@ static class GameLogic
 		//Free Resources and Close Audio, to end the program.
 		GameResources.FreeResources();
 	}
+
 }
 
 //=======================================================

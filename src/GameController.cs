@@ -247,6 +247,13 @@ public static class GameController
 		CheckAttackResult(result);
 	}
 
+	public static void SpecialAttack (int row, int col)
+	{
+		AttackResult result = default (AttackResult);
+		result = _theGame.Shoot (row, col);
+		CheckAttackResult (result);
+	}
+
 	/// <summary>
 	/// Gets the AI to attack.
 	/// </summary>
@@ -358,7 +365,7 @@ public static class GameController
 
 		UtilityFunctions.DrawAnimations();
 
-		SwinGame.RefreshScreen(90);
+		SwinGame.RefreshScreen();
 	}
 
 	/// <summary>

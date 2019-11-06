@@ -96,10 +96,10 @@ public class BattleShipsGame
 			AttackCompleted (this, newAttack);
 		}
 		//change player when 7 second past
-		if (newAttack.Value == ResultOfAttack.Skip) {
+		/*if (newAttack.Value == ResultOfAttack.Skip) {
 			_playerIndex = otherPlayer;
 
-		}
+		}*/
 
 		//change player if the last hit was a miss
 		if (newAttack.Value == ResultOfAttack.Miss) {
