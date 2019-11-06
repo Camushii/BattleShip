@@ -14,7 +14,7 @@
       <File FileName="src\DiscoveryController.cs" Line="51" Column="20" />
       <File FileName="src\EndingGameController.cs" Line="23" Column="29" />
       <File FileName="src\GameResources.cs" Line="219" Column="27" />
-      <File FileName="src\HighScoreController.cs" Line="202" Column="19" />
+      <File FileName="src\HighScoreController.cs" Line="203" Column="18" />
       <File FileName="src\Model\BattleShipsGame.cs" Line="94" Column="1" />
       <File FileName="src\Model\AIHardPlayer.cs" Line="143" Column="3" />
       <File FileName="src\Model\AIPlayer.cs" Line="1" Column="1" />
