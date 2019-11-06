@@ -19,8 +19,8 @@ public static class GameController
 	private static Player _human;
 
 	private static AIPlayer _ai;
-	private static DateTime _myDateTime;
-	private static System.Timers.Timer _timer;
+	//private static DateTime _myDateTime;
+	//private static System.Timers.Timer _timer;
 	private static Stack<GameState> _state = new Stack<GameState>();
 
 	private static AIOption _aiSetting;
@@ -180,9 +180,9 @@ public static class GameController
 				}
 
 				if (HumanPlayer.IsDestroyed) {
-				Audio.PlaySoundEffect(GameResources.GameSound("Lose\nThe time taken: "+ _timer));
+				Audio.PlaySoundEffect(GameResources.GameSound("Lose"/*\nThe time taken: "+ _timer*/));
 				} else {
-					Audio.PlaySoundEffect(GameResources.GameSound("Winner\nThe time taken: " + _timer));
+					Audio.PlaySoundEffect(GameResources.GameSound("Winner"/*\\nThe time taken: " + _timer*/));
 				}
 
 				break;
@@ -217,7 +217,7 @@ public static class GameController
 	/// <summary>
 	/// Start the timer
 	/// </summary>
-	public static void Timer ()
+	/*public static void Timer ()
 	{
 		_timer = new System.Timers.Timer ();
 		_timer.Interval = 1000;
@@ -231,7 +231,7 @@ public static class GameController
 	{
 		var diff = DateTime.Now.Subtract (_myDateTime);
 		this.textBox1.Text = diff.ToString ();
-	}
+	}*/
 	/// <summary>
 	/// Gets the player to attack the indicated row and column.
 	/// </summary>
@@ -243,7 +243,7 @@ public static class GameController
 	public static void Attack(int row, int col)
 	{
 		AttackResult result = default(AttackResult);
-		result = BattleShipsGame.Shoot (_theGame, row, col);
+		result = _theGame.Shoot(row, col);
 		CheckAttackResult(result);
 	}
 
