@@ -82,9 +82,9 @@ static class DiscoveryController
 	public static void DrawDiscovery()
 	{
 		const int SCORES_LEFT = 172;
-		const int SHOTS_TOP = 157;
-		const int HITS_TOP = 206;
-		const int SPLASH_TOP = 256;
+		const int SHOTS_TOP = 155;
+		const int HITS_TOP = 205;
+		const int SPLASH_TOP = 255;
 
 		if (SwinGame.KeyDown(KeyCode.vk_c)) {
 			UtilityFunctions.DrawField(GameController.HumanPlayer.EnemyGrid, GameController.ComputerPlayer, true);
@@ -95,14 +95,15 @@ static class DiscoveryController
 		if (SwinGame.KeyTyped (KeyCode.vk_m)) 
 		{
 			SwinGame.StopMusic ();
+			SwinGame.DrawText ("Muted", SwinGame.RGBAColor (2, 167, 252, 255), GameResources.GameFont ("Menu"), 172, 87);
 		}
 
 		UtilityFunctions.DrawSmallField(GameController.HumanPlayer.PlayerGrid, GameController.HumanPlayer);
 		UtilityFunctions.DrawMessage();
 
-		SwinGame.DrawText(GameController.HumanPlayer.Shots.ToString(), SwinGame.RGBAColor (2, 167, 252, 255), GameResources.GameFont("Menu"), SCORES_LEFT, SHOTS_TOP);
-		SwinGame.DrawText(GameController.HumanPlayer.Hits.ToString(), SwinGame.RGBAColor (2, 167, 252, 255), GameResources.GameFont("Menu"), SCORES_LEFT, HITS_TOP);
-		SwinGame.DrawText(GameController.HumanPlayer.Missed.ToString(), SwinGame.RGBAColor (2, 167, 252, 255), GameResources.GameFont("Menu"), SCORES_LEFT, SPLASH_TOP);
+		SwinGame.DrawText(GameController.HumanPlayer.Shots.ToString(), SwinGame.RGBAColor (2, 167, 252, 255), GameResources.GameFont("Score"), SCORES_LEFT, SHOTS_TOP);
+		SwinGame.DrawText(GameController.HumanPlayer.Hits.ToString(), SwinGame.RGBAColor (2, 167, 252, 255), GameResources.GameFont("Score"), SCORES_LEFT, HITS_TOP);
+		SwinGame.DrawText(GameController.HumanPlayer.Missed.ToString(), SwinGame.RGBAColor (2, 167, 252, 255), GameResources.GameFont("Score"), SCORES_LEFT, SPLASH_TOP);
 	}
 
 }

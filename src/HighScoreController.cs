@@ -18,7 +18,8 @@ static class HighScoreController
 {
 	private const int NAME_WIDTH = 3;
 
-	private const int SCORES_LEFT = 490;
+	//was 490
+	private const int SCORES_LEFT = 600;
 	/// <summary>
 	/// The score structure is used to keep the name and
 	/// score of the top players together.
@@ -125,7 +126,7 @@ static class HighScoreController
 		if (_Scores.Count == 0)
 			LoadScores();
 
-		SwinGame.DrawText("   High Scores   ", SwinGame.RGBAColor (2, 167, 252, 255), GameResources.GameFont("Courier"), SCORES_LEFT, SCORES_HEADING);
+		SwinGame.DrawText("   High Scores   ", SwinGame.RGBAColor (2, 167, 252, 255), GameResources.GameFont("ScoreBoard"), 580, SCORES_HEADING);
 		SwinGame.DrawText ("Press anywhere to go back to Main Menu", SwinGame.RGBAColor (2, 167, 252, 255), GameResources.GameFont ("Courier"), 40, 550);
 
 		//For all of the scores
