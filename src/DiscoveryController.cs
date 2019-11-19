@@ -22,7 +22,7 @@ static class DiscoveryController
 	/// </remarks>
 	public static void HandleDiscoveryInput()
 	{
-		if (SwinGame.KeyTyped(KeyCode.vk_ESCAPE)) {
+		if (SwinGame.KeyTyped(KeyCode.vk_SPACE)) {
 			GameController.AddNewState(GameState.ViewingGameMenu);
 		}
 
