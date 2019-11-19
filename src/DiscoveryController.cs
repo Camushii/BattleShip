@@ -22,8 +22,18 @@ static class DiscoveryController
 	/// </remarks>
 	public static void HandleDiscoveryInput()
 	{
-		if (SwinGame.KeyTyped(KeyCode.vk_SPACE)) {
+		int pauseTime = 10000;
+
+		if (SwinGame.KeyTyped (KeyCode.vk_p)) {
+			System.Threading.Thread.Sleep (pauseTime);
+		}
+
+		if (SwinGame.KeyTyped(KeyCode.vk_ESCAPE)) {
 			GameController.AddNewState(GameState.ViewingGameMenu);
+		}
+
+		if (SwinGame.KeyTyped (KeyCode.vk_SPACE)) {
+			GameController.AddNewState (GameState.Quitting);
 		}
 
 		if (SwinGame.MouseClicked(MouseButton.LeftButton)) {
