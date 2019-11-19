@@ -47,6 +47,12 @@ static class DeploymentController
 	/// </remarks>
 	public static void HandleDeploymentInput()
 	{
+		int pauseTime = 2000;
+
+		if (SwinGame.KeyTyped (KeyCode.vk_p)) {
+			System.Threading.Thread.Sleep (pauseTime);
+		}
+
 		if (SwinGame.KeyTyped(KeyCode.vk_ESCAPE)) {
 			GameController.AddNewState(GameState.ViewingGameMenu);
 		}
