@@ -214,54 +214,24 @@ public static class GameController
 
 		SwitchState(GameState.Discovering);
 	}
-
-	/// <summary>
-	/// Mutes the music.
-	/// </summary>
-	public static void MuteMusic ()
-	{
-		SwinGame.StopMusic ();
-	}
-
-	/// <summary>
-	/// Resumes the music.
-	/// </summary>
-	public static void ResumeMusic ()
-	{
-		SwinGame.PlayMusic (GameResources.GameMusic ("Background"));
-	}
-
-
-
-	/*public static void StopwatchUsingMethod ()
-	{
-		var timer = new Stopwatch ();
-		timer.Start ();
-
-		TimeSpan timetaken = timer.Elapsed;
-		string time = "Time: " + timetaken.ToString (@"m\:ss\.fff");
-		SwinGame.DrawText (time, SwinGame.RGBAColor (2, 167, 252, 255), GameResources.GameFont ("Menu"), 172, 87);
-	}
 	/// <summary>
 	/// Start the timer
 	/// </summary>
-	public static void Timer ()
+	/*public static void Timer ()
 	{
 		_timer = new System.Timers.Timer ();
 		_timer.Interval = 1000;
-		_timer.Elapsed += Timer_Tick;
+		_timer.Tick += Timer_Tick;
 
 		_myDateTime = DateTime.Now;
 		_timer.Start ();
-		SwinGame.DrawText ("Time:"+_timer, SwinGame.RGBAColor (2, 167, 252, 255), GameResources.GameFont ("Menu"), 172, 87);
 	}
 
 	public static void Timer_Tick (object sender, EventArgs e)
 	{
 		var diff = DateTime.Now.Subtract (_myDateTime);
-		//this.textBox1.Text = diff.ToString ();
+		this.textBox1.Text = diff.ToString ();
 	}*/
-
 	/// <summary>
 	/// Gets the player to attack the indicated row and column.
 	/// </summary>
@@ -280,8 +250,8 @@ public static class GameController
 	public static void SpecialAttack (int row, int col)
 	{
 		AttackResult result = default (AttackResult);
-		result = _theGame.Special (row, col);
-		CheckSpecialAttackResult (result, row, col);
+		result = _theGame.Shoot (row, col);
+		CheckAttackResult (result);
 	}
 
 	/// <summary>
@@ -319,21 +289,6 @@ public static class GameController
 		}
 	}
 
-	private static void CheckSpecialAttackResult(AttackResult result, int row, int col)
-	{
-		switch (result.Value) {
-		case ResultOfAttack.Miss:
-			if (object.ReferenceEquals (_theGame.Player, ComputerPlayer))
-				SpecialAttack (row, col);
-			//AIAttack ();
-			break;
-
-		case ResultOfAttack.GameOver:
-			SwitchState (GameState.EndingGame);
-			break;
-		}
-	}
-
 	/// <summary>
 	/// Handles the user SwinGame.
 	/// </summary>
@@ -361,7 +316,7 @@ public static class GameController
 				DeploymentController.HandleDeploymentInput();
 				break;
 			case GameState.Discovering:
-				DiscoveryController.HandleDiscoveryInput ();
+				DiscoveryController.HandleDiscoveryInput();
 				break;
 			case GameState.EndingGame:
 				EndingGameController.HandleEndOfGameInput();
