@@ -91,6 +91,9 @@ static class DiscoveryController
 	/// </summary>s
 	public static void DrawDiscovery()
 	{
+		//GameController.Timer();
+		//GameController.StopwatchUsingMethod ();
+
 		const int SCORES_LEFT = 172;
 		const int SHOTS_TOP = 155;
 		const int HITS_TOP = 205;
@@ -104,8 +107,11 @@ static class DiscoveryController
 
 		if (SwinGame.KeyTyped (KeyCode.vk_m)) 
 		{
-			SwinGame.StopMusic ();
-			SwinGame.DrawText ("Muted", SwinGame.RGBAColor (2, 167, 252, 255), GameResources.GameFont ("Menu"), 172, 87);
+			GameController.MuteMusic ();
+		}
+
+		if (SwinGame.KeyTyped (KeyCode.vk_r)) {
+			GameController.ResumeMusic ();
 		}
 
 		UtilityFunctions.DrawSmallField(GameController.HumanPlayer.PlayerGrid, GameController.HumanPlayer);

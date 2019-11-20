@@ -108,6 +108,36 @@ public class BattleShipsGame
 
 		return newAttack;
 	}
+
+	public AttackResult Special (int row, int col)
+	{
+		AttackResult newAttack = default (AttackResult);
+		int otherPlayer = (_playerIndex + 1) % 2;
+
+		newAttack = Player.Shoot (row, col);
+
+
+
+		//Will exit the game when all players ships are destroyed
+		if (_players [otherPlayer].IsDestroyed) {
+			newAttack = new AttackResult (ResultOfAttack.GameOver, newAttack.Ship, newAttack.Text, row, col);
+		}
+
+		if (AttackCompleted != null) {
+			AttackCompleted (this, newAttack);
+		}
+		//change player when 7 second past
+		/*if (newAttack.Value == ResultOfAttack.Skip) {
+			_playerIndex = otherPlayer;
+
+		}*/
+
+		if (newAttack.Value == ResultOfAttack.Miss) {
+
+		}
+
+		return newAttack;
+	}
 }
 
 //=======================================================
